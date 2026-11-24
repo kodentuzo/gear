@@ -1,0 +1,30 @@
+{
+	"name": "@kodentuzo/tape",
+	"version": "0.0.0",
+	"description": "Read, check and write tape.json: what an app is called.",
+	"license": "MIT",
+	"private": true,
+	"type": "module",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"default": "./dist/index.js"
+		}
+	},
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"check": "tsc --noEmit",
+		"build": "tsc --project tsconfig.build.json",
+		"try": "node scripts/try.ts"
+	},
+	"dependencies": {
+		"valibot": "1.5.0"
+	},
+	"devDependencies": {
+		"@types/node": "26.6.6",
+		"@valibot/to-json-schema": "1.8.0",
+		"typescript": "7.0.2"
+	}
+}
