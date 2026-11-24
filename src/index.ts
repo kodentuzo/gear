@@ -5,3 +5,4 @@ export { FORMAT_VERSION, LIMITS, parseTape } from './tape.ts';
 export type { Tape } from './tape.ts';
 export { OVERRIDABLE, applyOverrides, parseOverrides } from './overrides.ts';
 export type { Overrides } from './overrides.ts';
+export { fromWebManifest } from './manifest.ts';
