@@ -22,20 +22,37 @@ function text(limit: number) {
 	);
 }
 
-/** The fields that describe the app. */
+/** The fields that describe the app. The descriptions show up in editors. */
 export const tapeEntries = {
-	name: text(LIMITS.name),
-	short_name: v.exactOptional(text(LIMITS.short_name)),
-	description: v.exactOptional(text(LIMITS.description)),
+	name: v.pipe(text(LIMITS.name), v.description('The full name of the app.')),
+	short_name: v.exactOptional(
+		v.pipe(
+			text(LIMITS.short_name),
+			v.description('A short name for tight spaces, such as under a home screen icon. Falls back to name.')
+		)
+	),
+	description: v.exactOptional(
+		v.pipe(text(LIMITS.description), v.description('One or two sentences on what the app does.'))
+	),
 	icon: v.exactOptional(
-		v.pipe(v.string('wrong_type'), v.nonEmpty('empty'), v.regex(RELATIVE_PATH, 'invalid_path'))
+		v.pipe(
+			v.string('wrong_type'),
+			v.nonEmpty('empty'),
+			v.regex(RELATIVE_PATH, 'invalid_path'),
+			v.description('The path to the source icon, relative to this file.')
+		)
 	)
 };
 
 /** The whole file. Unknown keys are an error; `$schema` is the one allowed extra. */
 export const TapeFileSchema = v.strictObject({
-	$schema: v.exactOptional(v.string('wrong_type')),
-	tape: v.literal(FORMAT_VERSION, 'unsupported_version'),
+	$schema: v.exactOptional(
+		v.pipe(v.string('wrong_type'), v.description('Where the schema for this file is, for editors.'))
+	),
+	tape: v.pipe(
+		v.literal(FORMAT_VERSION, 'unsupported_version'),
+		v.description('The format version. It changes only on a breaking change.')
+	),
 	...tapeEntries
 });
 

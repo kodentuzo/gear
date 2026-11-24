@@ -1,4 +1,5 @@
 {
+	"$schema": "../tape.schema.json",
 	"tape": 1,
 	"name": "Sokoban Puzzle Collection",
 	"short_name": "Sokoban",

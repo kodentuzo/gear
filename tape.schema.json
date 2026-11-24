@@ -1,0 +1,48 @@
+{
+	"type": "object",
+	"properties": {
+		"$schema": {
+			"type": "string",
+			"description": "Where the schema for this file is, for editors."
+		},
+		"tape": {
+			"const": 1,
+			"description": "The format version. It changes only on a breaking change."
+		},
+		"name": {
+			"type": "string",
+			"minLength": 1,
+			"pattern": "\\S",
+			"maxLength": 45,
+			"description": "The full name of the app."
+		},
+		"short_name": {
+			"type": "string",
+			"minLength": 1,
+			"pattern": "\\S",
+			"maxLength": 12,
+			"description": "A short name for tight spaces, such as under a home screen icon. Falls back to name."
+		},
+		"description": {
+			"type": "string",
+			"minLength": 1,
+			"pattern": "\\S",
+			"maxLength": 300,
+			"description": "One or two sentences on what the app does."
+		},
+		"icon": {
+			"type": "string",
+			"minLength": 1,
+			"pattern": "^(?!\\/)(?!.*(?:^|\\/)\\.\\.(?:\\/|$))(?![A-Za-z][A-Za-z0-9+.-]*:)[^\\\\]+$",
+			"description": "The path to the source icon, relative to this file."
+		}
+	},
+	"required": [
+		"tape",
+		"name"
+	],
+	"additionalProperties": false,
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"title": "tape.json",
+	"description": "What an app is called. Read by @kodentuzo/tape."
+}

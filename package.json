@@ -9,14 +9,17 @@
 		".": {
 			"types": "./dist/index.d.ts",
 			"default": "./dist/index.js"
-		}
+		},
+		"./schema": "./tape.schema.json"
 	},
 	"files": [
-		"dist"
+		"dist",
+		"tape.schema.json"
 	],
 	"scripts": {
 		"check": "tsc --noEmit",
-		"build": "tsc --project tsconfig.build.json",
+		"schema": "node scripts/schema.ts",
+		"build": "node scripts/schema.ts && tsc --project tsconfig.build.json",
 		"try": "node scripts/try.ts"
 	},
 	"dependencies": {
