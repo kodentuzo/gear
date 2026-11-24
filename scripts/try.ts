@@ -16,6 +16,11 @@ const recipes: Record<string, (...args: unknown[]) => unknown> = {
 		const parsedOverrides = tape.parseOverrides(overridesJson);
 		if (!parsedOverrides.ok) return { failed: 'parseOverrides', ...parsedOverrides };
 		return tape.applyOverrides(parsedTape.value, parsedOverrides.value);
+	},
+	toWebManifest(tapeJson, assetsJson) {
+		const parsedTape = tape.parseTape(tapeJson);
+		if (!parsedTape.ok) return { failed: 'parseTape', ...parsedTape };
+		return tape.toWebManifest(parsedTape.value, (assetsJson ?? {}) as tape.ManifestAssets);
 	}
 };
 
