@@ -4,7 +4,7 @@ import { isPlainObject, NOT_AN_OBJECT, toIssues } from './issues.ts';
 import type { Result } from './result.ts';
 
 /** The format version this library reads and writes. It changes only on a breaking change. */
-export const FORMAT_VERSION = 1;
+export const FORMAT_VERSION = 0;
 
 /** The longest each text field may be, in characters. */
 export const LIMITS = { name: 45, short_name: 12, description: 300 } as const;

@@ -6,7 +6,7 @@
 			"description": "Where the schema for this file is, for editors."
 		},
 		"tape": {
-			"const": 1,
+			"const": 0,
 			"description": "The format version. It changes only on a breaking change."
 		},
 		"name": {

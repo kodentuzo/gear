@@ -1,6 +1,6 @@
 {
 	"$schema": "../tape.schema.json",
-	"tape": 1,
+	"tape": 0,
 	"name": "Sokoban Puzzle Collection",
 	"short_name": "Sokoban",
 	"description": "Push the boxes home.",

@@ -91,8 +91,8 @@ export function fromLabels(labels: unknown): Result<{ tape: Tape; origin: Origin
 	if (!isPlainObject(payload)) return fail(LABEL, 'wrong_type', `${LABEL} must hold an object.`);
 
 	const version = payload.version;
-	if (typeof version !== 'number' || !Number.isInteger(version) || version < 1) {
-		return fail('version', 'invalid_version', 'version must be a whole number, 1 or more.');
+	if (typeof version !== 'number' || !Number.isInteger(version) || version < 0) {
+		return fail('version', 'invalid_version', 'version must be a whole number, 0 or more.');
 	}
 	if (version > FORMAT_VERSION) {
 		return fail(
