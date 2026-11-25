@@ -1,11 +1,8 @@
 # Kodentuzo Gear
 
-> Build tools for web apps: app metadata, icons and container images.
+> Small tools for packaging a web app: metadata, icons and container images.
 
-Small tools for describing and building a web app. So far: `@kodentuzo/tape`, which reads,
-checks and writes `tape.json` (an app's name, description and icon), web manifests and image
-labels. Planned: sleeve (icons and theme colours) and recorder (builds an app into a container
-image).
+One package is built so far. Two more are planned.
 
 | Package                            | State   | What it does                                                                 |
 | ---------------------------------- | ------- | ---------------------------------------------------------------------------- |
