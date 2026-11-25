@@ -11,7 +11,7 @@ export const LIMITS = { name: 45, short_name: 12, description: 300 } as const;
 
 // A path inside the source, relative to the folder holding tape.json:
 // not absolute, no ".." part, no backslashes, and not a URL or a drive letter.
-const RELATIVE_PATH = /^(?!\/)(?!.*(?:^|\/)\.\.(?:\/|$))(?![A-Za-z][A-Za-z0-9+.-]*:)[^\\]+$/;
+export const RELATIVE_PATH = /^(?!\/)(?!.*(?:^|\/)\.\.(?:\/|$))(?![A-Za-z][A-Za-z0-9+.-]*:)[^\\]+$/;
 
 function text(limit: number) {
 	return v.pipe(
