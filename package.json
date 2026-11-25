@@ -2,7 +2,7 @@
 	"name": "@kodentuzo/gear",
 	"version": "0.0.0",
 	"description": "The tools for putting out tapes.",
-	"license": "MIT",
+	"license": "Apache-2.0",
 	"private": true,
 	"type": "module",
 	"packageManager": "pnpm@12.4.1",
