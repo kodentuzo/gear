@@ -1,0 +1,13 @@
+{
+	"name": "@kodentuzo/gear",
+	"version": "0.0.0",
+	"description": "The tools for putting out tapes.",
+	"license": "MIT",
+	"private": true,
+	"type": "module",
+	"packageManager": "pnpm@12.4.1",
+	"scripts": {
+		"check": "pnpm --recursive check",
+		"build": "pnpm --recursive build"
+	}
+}
