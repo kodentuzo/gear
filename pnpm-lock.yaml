@@ -164,7 +164,14 @@ settings:
 
 importers:
 
-  .: {}
+  .:
+    devDependencies:
+      '@types/node':
+        specifier: 26.6.6
+        version: 26.6.6
+      typescript:
+        specifier: 7.0.2
+        version: 7.0.2
 
   packages/tape:
     dependencies:
@@ -172,15 +179,9 @@ importers:
         specifier: 1.5.0
         version: 1.5.0(typescript@7.0.2)
     devDependencies:
-      '@types/node':
-        specifier: 26.6.6
-        version: 26.6.6
       '@valibot/to-json-schema':
         specifier: 1.8.0
         version: 1.8.0(valibot@1.5.0(typescript@7.0.2))
-      typescript:
-        specifier: 7.0.2
-        version: 7.0.2
 
 packages:
 
